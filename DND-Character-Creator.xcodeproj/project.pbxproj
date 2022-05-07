@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842F482B2826CBC600486914 /* DND_Character_CreatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */; };
+		842F482D2826CBC600486914 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F482C2826CBC600486914 /* ContentView.swift */; };
+		842F482F2826CBCA00486914 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842F482E2826CBCA00486914 /* Assets.xcassets */; };
+		842F48322826CBCA00486914 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842F48312826CBCA00486914 /* Preview Assets.xcassets */; };
+		842F483C2826CBCB00486914 /* DND_Character_CreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F483B2826CBCB00486914 /* DND_Character_CreatorTests.swift */; };
+		842F48462826CBCB00486914 /* DND_Character_CreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */; };
+		842F48482826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		842F48382826CBCB00486914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842F481F2826CBC600486914 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842F48262826CBC600486914;
+			remoteInfo = "DND-Character-Creator";
+		};
+		842F48422826CBCB00486914 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842F481F2826CBC600486914 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842F48262826CBC600486914;
+			remoteInfo = "DND-Character-Creator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		842F48272826CBC600486914 /* DND-Character-Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DND-Character-Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorApp.swift; sourceTree = "<group>"; };
+		842F482C2826CBC600486914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		842F482E2826CBCA00486914 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		842F48312826CBCA00486914 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		842F48372826CBCB00486914 /* DND-Character-CreatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DND-Character-CreatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842F483B2826CBCB00486914 /* DND_Character_CreatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorTests.swift; sourceTree = "<group>"; };
+		842F48412826CBCB00486914 /* DND-Character-CreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DND-Character-CreatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITests.swift; sourceTree = "<group>"; };
+		842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		842F48242826CBC600486914 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F48342826CBCB00486914 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F483E2826CBCB00486914 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		842F481E2826CBC600486914 = {
+			isa = PBXGroup;
+			children = (
+				842F48292826CBC600486914 /* DND-Character-Creator */,
+				842F483A2826CBCB00486914 /* DND-Character-CreatorTests */,
+				842F48442826CBCB00486914 /* DND-Character-CreatorUITests */,
+				842F48282826CBC600486914 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		842F48282826CBC600486914 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842F48272826CBC600486914 /* DND-Character-Creator.app */,
+				842F48372826CBCB00486914 /* DND-Character-CreatorTests.xctest */,
+				842F48412826CBCB00486914 /* DND-Character-CreatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		842F48292826CBC600486914 /* DND-Character-Creator */ = {
+			isa = PBXGroup;
+			children = (
+				842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */,
+				842F482C2826CBC600486914 /* ContentView.swift */,
+				842F482E2826CBCA00486914 /* Assets.xcassets */,
+				842F48302826CBCA00486914 /* Preview Content */,
+			);
+			path = "DND-Character-Creator";
+			sourceTree = "<group>";
+		};
+		842F48302826CBCA00486914 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				842F48312826CBCA00486914 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		842F483A2826CBCB00486914 /* DND-Character-CreatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				842F483B2826CBCB00486914 /* DND_Character_CreatorTests.swift */,
+			);
+			path = "DND-Character-CreatorTests";
+			sourceTree = "<group>";
+		};
+		842F48442826CBCB00486914 /* DND-Character-CreatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */,
+				842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */,
+			);
+			path = "DND-Character-CreatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		842F48262826CBC600486914 /* DND-Character-Creator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842F484B2826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-Creator" */;
+			buildPhases = (
+				842F48232826CBC600486914 /* Sources */,
+				842F48242826CBC600486914 /* Frameworks */,
+				842F48252826CBC600486914 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DND-Character-Creator";
+			productName = "DND-Character-Creator";
+			productReference = 842F48272826CBC600486914 /* DND-Character-Creator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		842F48362826CBCB00486914 /* DND-Character-CreatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842F484E2826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-CreatorTests" */;
+			buildPhases = (
+				842F48332826CBCB00486914 /* Sources */,
+				842F48342826CBCB00486914 /* Frameworks */,
+				842F48352826CBCB00486914 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842F48392826CBCB00486914 /* PBXTargetDependency */,
+			);
+			name = "DND-Character-CreatorTests";
+			productName = "DND-Character-CreatorTests";
+			productReference = 842F48372826CBCB00486914 /* DND-Character-CreatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		842F48402826CBCB00486914 /* DND-Character-CreatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842F48512826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-CreatorUITests" */;
+			buildPhases = (
+				842F483D2826CBCB00486914 /* Sources */,
+				842F483E2826CBCB00486914 /* Frameworks */,
+				842F483F2826CBCB00486914 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842F48432826CBCB00486914 /* PBXTargetDependency */,
+			);
+			name = "DND-Character-CreatorUITests";
+			productName = "DND-Character-CreatorUITests";
+			productReference = 842F48412826CBCB00486914 /* DND-Character-CreatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		842F481F2826CBC600486914 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					842F48262826CBC600486914 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					842F48362826CBCB00486914 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 842F48262826CBC600486914;
+					};
+					842F48402826CBCB00486914 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 842F48262826CBC600486914;
+					};
+				};
+			};
+			buildConfigurationList = 842F48222826CBC600486914 /* Build configuration list for PBXProject "DND-Character-Creator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 842F481E2826CBC600486914;
+			productRefGroup = 842F48282826CBC600486914 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				842F48262826CBC600486914 /* DND-Character-Creator */,
+				842F48362826CBCB00486914 /* DND-Character-CreatorTests */,
+				842F48402826CBCB00486914 /* DND-Character-CreatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		842F48252826CBC600486914 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842F48322826CBCA00486914 /* Preview Assets.xcassets in Resources */,
+				842F482F2826CBCA00486914 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F48352826CBCB00486914 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F483F2826CBCB00486914 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		842F48232826CBC600486914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842F482D2826CBC600486914 /* ContentView.swift in Sources */,
+				842F482B2826CBC600486914 /* DND_Character_CreatorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F48332826CBCB00486914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842F483C2826CBCB00486914 /* DND_Character_CreatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842F483D2826CBCB00486914 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842F48482826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift in Sources */,
+				842F48462826CBCB00486914 /* DND_Character_CreatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		842F48392826CBCB00486914 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842F48262826CBC600486914 /* DND-Character-Creator */;
+			targetProxy = 842F48382826CBCB00486914 /* PBXContainerItemProxy */;
+		};
+		842F48432826CBCB00486914 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842F48262826CBC600486914 /* DND-Character-Creator */;
+			targetProxy = 842F48422826CBCB00486914 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		842F48492826CBCB00486914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		842F484A2826CBCB00486914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842F484C2826CBCB00486914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DND-Character-Creator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-Creator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842F484D2826CBCB00486914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DND-Character-Creator/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-Creator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		842F484F2826CBCB00486914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-CreatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DND-Character-Creator.app/DND-Character-Creator";
+			};
+			name = Debug;
+		};
+		842F48502826CBCB00486914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-CreatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DND-Character-Creator.app/DND-Character-Creator";
+			};
+			name = Release;
+		};
+		842F48522826CBCB00486914 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-CreatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DND-Character-Creator";
+			};
+			name = Debug;
+		};
+		842F48532826CBCB00486914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.barry.DND-Character-CreatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DND-Character-Creator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		842F48222826CBC600486914 /* Build configuration list for PBXProject "DND-Character-Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842F48492826CBCB00486914 /* Debug */,
+				842F484A2826CBCB00486914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842F484B2826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-Creator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842F484C2826CBCB00486914 /* Debug */,
+				842F484D2826CBCB00486914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842F484E2826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-CreatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842F484F2826CBCB00486914 /* Debug */,
+				842F48502826CBCB00486914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842F48512826CBCB00486914 /* Build configuration list for PBXNativeTarget "DND-Character-CreatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842F48522826CBCB00486914 /* Debug */,
+				842F48532826CBCB00486914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 842F481F2826CBC600486914 /* Project object */;
+}

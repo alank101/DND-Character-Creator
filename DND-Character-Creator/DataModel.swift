@@ -8,12 +8,12 @@
 import Foundation
 
 enum Class: String{
-    case
+    case lord, serf, maiden, priest, knight
 }
 
 enum Race: String{
-    
+    case ogre, knight, witcher, elf
 }
 struct CharacterModel: Identifiable{
-
+    var id = UUID().uuidString
 }

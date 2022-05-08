@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+//need your help in finishing this!!
 enum Class: String{
     case lord, serf, maiden, priest, knight
 }

@@ -20,6 +20,9 @@ struct DetailPage: View {
         }
         
 //        Button  Deploy Character // maybe we need to change this
+        
+        
+        //balls in your court now
     }
 }
 

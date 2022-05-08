@@ -10,6 +10,7 @@ import SwiftUI
 struct DetailPage: View {
     var body: some View {
         Text("Your Characters")
+        Spacer()
         
         //if none are present, maybe we need to have a conditional screen --> boolean based if data is present or not
         

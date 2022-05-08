@@ -28,7 +28,7 @@ struct InitialScreen: View {
             // need dice
             
             
-//            Button() for going to next screen it should probably say enter
+//            Button() for going to next screen it should probably say enter //should navigate to Edit screen
         }
         
     }

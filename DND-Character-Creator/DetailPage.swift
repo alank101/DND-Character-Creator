@@ -18,6 +18,8 @@ struct DetailPage: View {
             //character traits vstack with prefilled in data from other screen
             //this needs to be array based
         }
+        
+//        Button  Deploy Character // maybe we need to change this
     }
 }
 

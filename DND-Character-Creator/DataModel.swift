@@ -18,6 +18,9 @@ enum Race: String{
 
 struct CharacterModel: Identifiable{
     var id = UUID().uuidString
+    var name = String()
+    var strength = Int()
+    
 }
 
 //random number generator

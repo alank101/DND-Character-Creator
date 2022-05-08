@@ -29,6 +29,8 @@ struct EditScreen: View {
         VStack{
             HStack{
                 //3 character traits
+                //text field for each one
+                //maybe this needs to be its own struct
             }
             HStack{
                 //3 character traits

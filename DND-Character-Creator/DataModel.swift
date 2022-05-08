@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+enum Class: String{
+    case
+}
+
+enum Race: String{
+    
+}
+struct CharacterModel: Identifiable{
+
+}

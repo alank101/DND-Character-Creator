@@ -12,6 +12,7 @@ struct DND_Character_CreatorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            //working on set up
         }
     }
 }

@@ -24,7 +24,11 @@ struct InitialScreen: View {
                 .multilineTextAlignment(.center)
                 
             //font should look similar to the ui screen on figma mockup
-//            Button()
+            
+            // need dice
+            
+            
+//            Button() for going to next screen it should probably say enter
         }
         
     }

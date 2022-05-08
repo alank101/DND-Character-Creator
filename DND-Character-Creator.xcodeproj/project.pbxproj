@@ -97,6 +97,25 @@
 			path = "Data model";
 			sourceTree = "<group>";
 		};
+		1016430428277A6E00CD13FD /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				10511BA228275A2A0033B766 /* InitialScreen.swift */,
+				10511BA628275A510033B766 /* DetailPage.swift */,
+				10511BA428275A410033B766 /* EditScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		1016430528277A9C00CD13FD /* InitialScreenComponents */ = {
+			isa = PBXGroup;
+			children = (
+				842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */,
+				842F482C2826CBC600486914 /* ContentView.swift */,
+			);
+			path = InitialScreenComponents;
+			sourceTree = "<group>";
+		};
 		842F481E2826CBC600486914 = {
 			isa = PBXGroup;
 			children = (
@@ -120,13 +139,10 @@
 		842F48292826CBC600486914 /* DND-Character-Creator */ = {
 			isa = PBXGroup;
 			children = (
+				1016430428277A6E00CD13FD /* Screens */,
 				101643032827798E00CD13FD /* Data model */,
-				842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */,
-				842F482C2826CBC600486914 /* ContentView.swift */,
-				10511BA228275A2A0033B766 /* InitialScreen.swift */,
-				10511BA428275A410033B766 /* EditScreen.swift */,
+				1016430528277A9C00CD13FD /* InitialScreenComponents */,
 				101643002827796200CD13FD /* components */,
-				10511BA628275A510033B766 /* DetailPage.swift */,
 				842F482E2826CBCA00486914 /* Assets.xcassets */,
 				842F48302826CBCA00486914 /* Preview Content */,
 			);

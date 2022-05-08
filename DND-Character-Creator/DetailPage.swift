@@ -9,7 +9,15 @@ import SwiftUI
 
 struct DetailPage: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Your Characters")
+        
+        //if none are present, maybe we need to have a conditional screen --> boolean based if data is present or not
+        
+        HStack{
+            //image
+            //character traits vstack with prefilled in data from other screen
+            //this needs to be array based
+        }
     }
 }
 

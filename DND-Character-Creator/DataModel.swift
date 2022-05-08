@@ -14,6 +14,13 @@ enum Class: String{
 enum Race: String{
     case ogre, knight, witcher, elf
 }
+
+
 struct CharacterModel: Identifiable{
     var id = UUID().uuidString
 }
+
+//random number generator
+
+
+/// picture --> array

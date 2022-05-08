@@ -9,7 +9,15 @@ import SwiftUI
 
 struct EditScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image("Dragon")
+            HStack{
+                //Image 3* dice
+            }
+            Text("Dungeons and Dragons Character Creator")
+            //font should look similar to the ui screen on figma mockup
+            
+        }
     }
 }
 

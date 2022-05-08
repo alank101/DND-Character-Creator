@@ -9,23 +9,7 @@ import SwiftUI
 
 struct EditScreen: View {
     var body: some View {
-        ZStack{
-            Image("101")
-                .resizable()
-                .aspectRatio (contentMode: .fill)
-                .clipped()
-                .frame(height: 155)
-            HStack{
-                //Image 3* dice
-                
-            }
-            Spacer()
-            Text("Dungeons and Dragons Character Creator")
-                .multilineTextAlignment(.center)
-                
-            //font should look similar to the ui screen on figma mockup
-            
-        }
+        Text("sss")
     }
 }
 

@@ -11,6 +11,7 @@ struct ContentView: View {
     var body: some View {
         Text("You are doing awesome! :D")
             .padding()
+        EditScreen()
     }
 }
 

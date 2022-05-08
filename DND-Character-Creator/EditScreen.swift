@@ -21,6 +21,8 @@ struct EditScreen: View {
             }
             Spacer()
             Text("Dungeons and Dragons Character Creator")
+                .multilineTextAlignment(.center)
+                
             //font should look similar to the ui screen on figma mockup
             
         }

@@ -5,6 +5,7 @@
 //  Created by marvin evins on 5/7/22.
 //
 
+//marvins page
 import SwiftUI
 
 struct DetailPage: View {

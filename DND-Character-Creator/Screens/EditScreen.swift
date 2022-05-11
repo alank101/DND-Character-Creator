@@ -18,6 +18,8 @@ struct EditScreen: View {
             VStack{
                 // need two drop downs
                 //stacked on top of each other
+                Dropdown()
+                Dropdown()
             }
             //need image placement drop
         }

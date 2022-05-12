@@ -57,6 +57,11 @@ let cha2 = Int.random(in: 1...6)
 let cha3 = Int.random(in: 1...6)
 
 var rolledStrength = str1 + str2 + str3
+var rolledDexterity = dex2 + dex2 + dex3
+var rolledConstitution = con1 + con2 + con3
+var rolledIntelligence = int1 + int2 + int3
+var rolledWisdom = wis1 + wis2 + wis3
+var rolledCharisma = cha1 + cha2 + cha3
 
 
 //random number generator

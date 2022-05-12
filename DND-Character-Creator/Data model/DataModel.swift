@@ -7,13 +7,14 @@
 //alan's screen
 
 import Foundation
+import SwiftUI
 //need your help in finishing this!!
 enum Class: String{
-    case sorcerer, warlock, fighter, barbarian, ranger, paladin, bard, wizard, cleric, druid, rogue, monk
+    case sorcerer, warlock, fighter, barbarian, ranger, paladin, bard, wizard, cleric, druid, rogue, monk, no_class
 }
 
 enum Race: String{
-    case human, elf, half_elf, dwarf, halfling, dragonborn, tiefling, gnome, half_orc
+    case human, elf, half_elf, dwarf, halfling, dragonborn, tiefling, gnome, half_orc, no_race
 }
 
 
@@ -28,6 +29,7 @@ struct CharacterModel: Identifiable{
     var intelligence: Int
     var wisdom: Int
     var charisma: Int
+    var image: Image
 }
 
 let str1 = Int.random(in: 1...6)

@@ -9,15 +9,20 @@
 import SwiftUI
 
 struct DetailPage: View {
-    let character: CharacterModel = CharacterModel(name: "", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill"))
+    let character: CharacterModel = CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill"))
     
     var body: some View {
         VStack {
             HStack {
-                character.image
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 75)
+                VStack {
+                    Text(character.name)
+                        .font(.caption)
+                    character.image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 75)
+                }
+                
                 Spacer()
                 VStack(alignment: .leading) {
                     HStack {

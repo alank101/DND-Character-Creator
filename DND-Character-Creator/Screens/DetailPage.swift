@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct DetailPage: View {
-    let character: CharacterModel = CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill"))
+    let character: CharacterModel
     
     var body: some View {
         VStack {
@@ -96,6 +96,6 @@ struct DetailPage: View {
 
 struct DetailPage_Previews: PreviewProvider {
     static var previews: some View {
-        DetailPage()
+        DetailPage(character: CharacterModel(name: "Create New Character", charClass: .fighter, charRace: .human, strength: rolledStrength, dexterity: rolledDexterity, constitution: rolledConstitution, intelligence: rolledIntelligence, wisdom: rolledWisdom, charisma: rolledCharisma, image: Image(systemName: "pencil.circle.fill")))
     }
 }

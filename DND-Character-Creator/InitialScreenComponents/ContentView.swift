@@ -10,10 +10,15 @@ import SwiftUI
 struct ContentView: View {
     
     @State var character: [CharacterModel] = [
-        CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil,circle.fill")),
-        CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil,circle.fill")),
-        CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil,circle.fill"))
+        CharacterModel(name: "Create New Character", charClass: .fighter, charRace: .human, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill")),
+        CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill")),
+        CharacterModel(name: "Create New Character", charClass: .no_class, charRace: .no_race, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill")),
     ]
+    
+    func add() {
+        character.append(CharacterModel(name: "Create New Character", charClass: .fighter, charRace: .human, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image(systemName: "pencil.circle.fill")))
+    }
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -22,10 +27,22 @@ struct ContentView: View {
                         NavigationLink {
                             
                         } label: {
-                            DetailPage()
+                            DetailPage(character: character)
+                        }
+                    }.onDelete { indexSet in
+                        character.remove(atOffsets: indexSet)
+                    }
+                    .onMove { indices, newOffset in
+                        character.move(fromOffsets: indices, toOffset: newOffset)
+                    }
+                }.navigationBarItems(leading: EditButton())
+                    .toolbar {
+                        Button {
+                            add()
+                        } label: {
+                            Image(systemName: "plus")
                         }
                     }
-                }
             }
         }
     }

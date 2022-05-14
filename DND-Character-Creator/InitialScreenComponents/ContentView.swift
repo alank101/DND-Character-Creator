@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  DND-Character-Creator
 //
-//  Created by admin on 5/7/22.
+//  Created by Alan on 5/7/22.
 //
 
 import SwiftUI

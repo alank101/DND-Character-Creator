@@ -10,18 +10,30 @@ import SwiftUI
 
 struct DetailPage: View {
     let character: CharacterModel
- 
+    var images = ["dwarf1", "dwarf2", "elf1", "elf2"]
+    @Binding var pickedImage : String
     
     var body: some View {
+        
         VStack {
             HStack {
+                
+                
                 VStack {
                     Text(character.name)
                         .font(.caption)
-                    character.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 75)
+//                    character.image
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 75)
+                    
+                    //images
+                    ForEach(images, id: \.self ){
+                        image in
+                        Image(image)
+                    }
+                   
+                    
                 }
                 
                 Spacer()
@@ -78,6 +90,12 @@ struct DetailPage: View {
             }
         }.padding()
         
+//        Picker("Images",selection: $images) {
+//            ForEach(images , id: \.self){ image in
+//                Image(image)
+//            }
+//
+//        }
         
         
         //if none are present, maybe we need to have a conditional screen --> boolean based if data is present or not

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		101643022827798400CD13FD /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101643012827798400CD13FD /* Dropdown.swift */; };
+		101643022827798400CD13FD /* ClassDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101643012827798400CD13FD /* ClassDropdown.swift */; };
 		10511BA328275A2A0033B766 /* InitialScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10511BA228275A2A0033B766 /* InitialScreen.swift */; };
 		10511BA528275A410033B766 /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10511BA428275A410033B766 /* EditScreen.swift */; };
 		10511BA728275A510033B766 /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10511BA628275A510033B766 /* DetailPage.swift */; };
@@ -19,6 +19,7 @@
 		842F483C2826CBCB00486914 /* DND_Character_CreatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F483B2826CBCB00486914 /* DND_Character_CreatorTests.swift */; };
 		842F48462826CBCB00486914 /* DND_Character_CreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */; };
 		842F48482826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */; };
+		8488EF15282FFAEE00589149 /* RaceDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488EF14282FFAEE00589149 /* RaceDropdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		101643012827798400CD13FD /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		101643012827798400CD13FD /* ClassDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDropdown.swift; sourceTree = "<group>"; };
 		10511BA228275A2A0033B766 /* InitialScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScreen.swift; sourceTree = "<group>"; };
 		10511BA428275A410033B766 /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		10511BA628275A510033B766 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
@@ -54,6 +55,7 @@
 		842F48412826CBCB00486914 /* DND-Character-CreatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DND-Character-CreatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITests.swift; sourceTree = "<group>"; };
 		842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8488EF14282FFAEE00589149 /* RaceDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,8 @@
 		101643002827796200CD13FD /* components */ = {
 			isa = PBXGroup;
 			children = (
-				101643012827798400CD13FD /* Dropdown.swift */,
+				101643012827798400CD13FD /* ClassDropdown.swift */,
+				8488EF14282FFAEE00589149 /* RaceDropdown.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -309,8 +312,9 @@
 				842F482D2826CBC600486914 /* ContentView.swift in Sources */,
 				10511BA728275A510033B766 /* DetailPage.swift in Sources */,
 				842F482B2826CBC600486914 /* DND_Character_CreatorApp.swift in Sources */,
+				8488EF15282FFAEE00589149 /* RaceDropdown.swift in Sources */,
 				10511BA928275A600033B766 /* DataModel.swift in Sources */,
-				101643022827798400CD13FD /* Dropdown.swift in Sources */,
+				101643022827798400CD13FD /* ClassDropdown.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

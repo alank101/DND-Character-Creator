@@ -10,6 +10,7 @@ import SwiftUI
 
 struct EditScreen: View {
     @Binding var character: CharacterModel
+    @Binding var attribute: Attribute
     var body: some View {
         VStack{
             Text("Character Creator")
@@ -48,10 +49,10 @@ struct EditScreen: View {
             VStack{
                 HStack{
                     //3 character traits
-                    //text field for each one
+                    //texts for each one
                     //maybe this needs to be its own struct
                     
-                    
+                    //
                     
                 }
                 HStack{

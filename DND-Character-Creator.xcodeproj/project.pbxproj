@@ -47,6 +47,7 @@
 		10511BA628275A510033B766 /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		10511BA828275A600033B766 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		10A96FAC2830007F00BC843F /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
+		10A96FAE2830034A00BC843F /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		842F48272826CBC600486914 /* DND-Character-Creator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DND-Character-Creator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		842F482A2826CBC600486914 /* DND_Character_CreatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorApp.swift; sourceTree = "<group>"; };
 		842F482C2826CBC600486914 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		842F48292826CBC600486914 /* DND-Character-Creator */ = {
 			isa = PBXGroup;
 			children = (
+				10A96FAE2830034A00BC843F /* readme.md */,
 				1016430428277A6E00CD13FD /* Screens */,
 				101643032827798E00CD13FD /* Data model */,
 				1016430528277A9C00CD13FD /* InitialScreenComponents */,

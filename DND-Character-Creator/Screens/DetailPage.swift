@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DetailPage: View {
     let character: CharacterModel
+ 
     
     var body: some View {
         VStack {
@@ -95,6 +96,7 @@ struct DetailPage: View {
 }
 
 struct DetailPage_Previews: PreviewProvider {
+    
     static var previews: some View {
         DetailPage(character: CharacterModel(name: "Create New Character", charClass: .fighter, charRace: .human, strength: rolledStrength, dexterity: rolledDexterity, constitution: rolledConstitution, intelligence: rolledIntelligence, wisdom: rolledWisdom, charisma: rolledCharisma, image: Image(systemName: "pencil.circle.fill")))
     }

@@ -25,9 +25,9 @@ struct ContentView: View {
                 List {
                     ForEach($character) { $character in
                         NavigationLink {
-                            EditScreen(character: $character)
+                            EditScreen(pickedImage: .constant(""), character: $character)
                         } label: {
-                            DetailPage(character: character, pickedImage: .constant(""))
+                            DetailPage(character: character)
                         }
                     }.onDelete { indexSet in
                         character.remove(atOffsets: indexSet)

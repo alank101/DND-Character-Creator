@@ -10,32 +10,19 @@ import SwiftUI
 
 struct DetailPage: View {
     let character: CharacterModel
-    var images = ["dwarf1", "dwarf2", "elf1", "elf2"]
-    @Binding var pickedImage : String
     
     var body: some View {
         
         VStack {
             HStack {
-                
-                
                 VStack {
                     Text(character.name)
                         .font(.caption)
-//                    character.image
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(width: 75)
-                    
-                    //images
-                    ForEach(images, id: \.self ){
-                        image in
-                        Image(image)
-                    }
-                   
-                    
+                    character.image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 75)
                 }
-                
                 Spacer()
                 VStack(alignment: .leading) {
                     HStack {
@@ -89,26 +76,11 @@ struct DetailPage: View {
                 }
             }
         }.padding()
-        
-//        Picker("Images",selection: $images) {
-//            ForEach(images , id: \.self){ image in
-//                Image(image)
-//            }
-//
-//        }
-        
-        
         //if none are present, maybe we need to have a conditional screen --> boolean based if data is present or not
-        
-        
         //image
         //character traits vstack with prefilled in data from other screen
         //this needs to be array based
-        
-        
         //        Button  Deploy Character // maybe we need to change this
-        
-        
         //balls in your court now
     }
 }
@@ -116,6 +88,6 @@ struct DetailPage: View {
 struct DetailPage_Previews: PreviewProvider {
     
     static var previews: some View {
-        DetailPage(character: CharacterModel(name: "Create New Character", charClass: .fighter, charRace: .human, strength: rolledStrength, dexterity: rolledDexterity, constitution: rolledConstitution, intelligence: rolledIntelligence, wisdom: rolledWisdom, charisma: rolledCharisma, image: Image(systemName: "pencil.circle.fill")), pickedImage: .constant(""))
+        DetailPage(character: CharacterModel(name: "", charClass: .fighter, charRace: .no_race, strength: 0, dexterity: 0, constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill")))
     }
 }

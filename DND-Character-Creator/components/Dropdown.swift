@@ -13,6 +13,11 @@ struct Dropdown: View {
 //        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
         //dropdown menu//picker components
         Picker(
+            //        Picker("Category", selection: $quotation.category) {
+            //        Text("Physics").tag(Category.physics)
+            //        Text("Habit").tag(Category.habit)
+            //        Text("Life").tag(Category.life)
+            //    }
             
             
         } label: {

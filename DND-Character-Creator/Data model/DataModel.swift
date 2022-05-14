@@ -32,36 +32,13 @@ struct CharacterModel: Identifiable{
     var image: Image
 }
 
-let str1 = Int.random(in: 1...6)
-let str2 = Int.random(in: 1...6)
-let str3 = Int.random(in: 1...6)
 
-let dex1 = Int.random(in: 1...6)
-let dex2 = Int.random(in: 1...6)
-let dex3 = Int.random(in: 1...6)
-
-let con1 = Int.random(in: 1...6)
-let con2 = Int.random(in: 1...6)
-let con3 = Int.random(in: 1...6)
-
-let int1 = Int.random(in: 1...6)
-let int2 = Int.random(in: 1...6)
-let int3 = Int.random(in: 1...6)
-
-let wis1 = Int.random(in: 1...6)
-let wis2 = Int.random(in: 1...6)
-let wis3 = Int.random(in: 1...6)
-
-let cha1 = Int.random(in: 1...6)
-let cha2 = Int.random(in: 1...6)
-let cha3 = Int.random(in: 1...6)
-
-var rolledStrength = str1 + str2 + str3
-var rolledDexterity = dex2 + dex2 + dex3
-var rolledConstitution = con1 + con2 + con3
-var rolledIntelligence = int1 + int2 + int3
-var rolledWisdom = wis1 + wis2 + wis3
-var rolledCharisma = cha1 + cha2 + cha3
+var rolledStrength = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+var rolledDexterity = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+var rolledConstitution = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+var rolledIntelligence = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+var rolledWisdom = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+var rolledCharisma = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
 
 
 //random number generator

@@ -18,7 +18,6 @@ struct RaceDropdown: View {
             Text("Halfling").tag(Race.halfling)
             Text("Half Orc").tag(Race.half_orc)
             Text("Dwarf").tag(Race.dwarf)
-            Text("Dragonborn").tag(Race.dragonborn)
             Text("Gnome").tag(Race.gnome)
             Text("No Race").tag(Race.no_race)
         } label: {

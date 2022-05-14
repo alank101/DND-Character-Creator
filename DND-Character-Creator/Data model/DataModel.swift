@@ -14,7 +14,7 @@ enum Class: String{
 }
 
 enum Race: String{
-    case human, elf, half_elf, dwarf, halfling, dragonborn, tiefling, gnome, half_orc, no_race
+    case human, elf, half_elf, dwarf, halfling, tiefling, gnome, half_orc, no_race
 }
 
 

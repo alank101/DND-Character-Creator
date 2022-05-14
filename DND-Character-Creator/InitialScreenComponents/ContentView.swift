@@ -25,7 +25,7 @@ struct ContentView: View {
                 List {
                     ForEach($character) { $character in
                         NavigationLink {
-                            
+                            EditScreen(character: $character)
                         } label: {
                             DetailPage(character: character)
                         }

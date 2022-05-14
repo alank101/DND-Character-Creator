@@ -72,9 +72,7 @@ struct EditScreen: View {
 
                     
                 }
-                HStack{
-                    //3 character traits
-                }
+              
             }
             Spacer()
         }

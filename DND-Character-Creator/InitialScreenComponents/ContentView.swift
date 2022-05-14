@@ -27,7 +27,7 @@ struct ContentView: View {
                         NavigationLink {
                             EditScreen(character: $character)
                         } label: {
-                            DetailPage(character: character)
+                            DetailPage(character: character, pickedImage: .constant(""))
                         }
                     }.onDelete { indexSet in
                         character.remove(atOffsets: indexSet)

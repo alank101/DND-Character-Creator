@@ -10,7 +10,7 @@ import SwiftUI
 
 struct EditScreen: View {
     
-   
+//   need spot for character name
     
     
     //rolls

@@ -9,39 +9,56 @@ import SwiftUI
 //this probably needs to be a swift ui form
 
 struct EditScreen: View {
+    @Binding var character: CharacterModel
     var body: some View {
-        Text("Character Creator")
-        //need same font as initial screej
-        
-        //top part
-        HStack {
-            VStack{
-                // need two drop downs
-                //stacked on top of each other
-//                Dropdown(character: <#Binding<CharacterModel>#>)
-//                Dropdown(character: <#Binding<CharacterModel>#>)
-            }
-            //need image placement drop
-        }
-        
-        //center section filled with properties of character
-        
-        //only six options so we probably  only need to create just two hstacks
-        // future reference, it we expand this, this could be a lazy grid
-        
         VStack{
-            HStack{
-                //3 character traits
-                //text field for each one
-                //maybe this needs to be its own struct
-                
-                
-                
+            Text("Character Creator")
+            Spacer()
+    //        Text("Character Creator")
+            //need same font as initial screej
+            
+            //top part
+            HStack {
+                VStack{
+                    // need two drop downs
+                    //stacked on top of each other
+    //                Dropdown(character: Binding<CharacterModel>)
+                    Text("\(character.name)")
+    //                Dropdown(character: Binding<CharacterModel>)
+                    Text("\(character.name)")
+                    
+                    
+                }
+                //need image placement drop
+                Image( "101")
+                    .resizable()
+                    .aspectRatio (contentMode: .fill)
+                    .clipped()
+                    .frame(height: 140)
             }
-            HStack{
-                //3 character traits
+            .padding()
+            Spacer()
+            //center section filled with properties of character
+            
+            //only six options so we probably  only need to create just two hstacks
+            // future reference, it we expand this, this could be a lazy grid
+            
+            VStack{
+                HStack{
+                    //3 character traits
+                    //text field for each one
+                    //maybe this needs to be its own struct
+                    
+                    
+                    
+                }
+                HStack{
+                    //3 character traits
+                }
             }
+            Spacer()
         }
+        
         
         
         //NO BOTTOM PART THOUGHT I THINK ONE IS NEEDED
@@ -54,6 +71,6 @@ struct EditScreen: View {
 
 struct EditScreen_Previews: PreviewProvider {
     static var previews: some View {
-        EditScreen()
+        EditScreen(character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: 0, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image:Image(systemName: "pencil.circle.fill") )))
     }
 }

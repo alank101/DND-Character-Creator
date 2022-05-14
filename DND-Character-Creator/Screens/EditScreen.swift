@@ -23,9 +23,11 @@ struct EditScreen: View {
                     // need two drop downs
                     //stacked on top of each other
     //                Dropdown(character: Binding<CharacterModel>)
-                    Text("\(character.name)")
+//                    Text("\(character.name)")
+                    ClassDropdown(character:  .constant(CharacterModel(name: "", charClass: .barbarian, charRace: .elf, strength: 0, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image:Image(systemName: "pencil.circle.fill"))))
     //                Dropdown(character: Binding<CharacterModel>)
-                    Text("\(character.name)")
+//                    Text("\(character.name)")
+                    RaceDropdown(character:   .constant(CharacterModel(name: "", charClass: .barbarian, charRace: .elf, strength: 0, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image:Image(systemName: "pencil.circle.fill") )))
                     
                     
                 }

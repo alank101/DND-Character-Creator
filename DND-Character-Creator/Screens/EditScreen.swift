@@ -55,23 +55,94 @@ struct EditScreen: View {
             // future reference, it we expand this, this could be a lazy grid
             
             VStack{
-                VStack{
-                    //3 character traits
-                    //texts for each one
-                    //maybe this needs to be its own struct
+                HStack{
+                    VStack{
+            
+                     Text("Strength")
+                        Text("\(character.strength)" )
+                            Button {
+                                
+                                character.strength = rolledStrength
+                            } label: {
+                                Text("Roll")
+                            }
+                    }
+                    .padding()
+                    VStack{
+            
+                     Text("Dexterity")
+                        Text("\(character.dexterity)" )
+                            Button {
+                                
+                                character.strength = rolledDexterity
+                            } label: {
+                                Text("Roll")
+                            }
+                    }
+                    .padding()
                     
-                    Text("Strength")
-                    Text("\(character.strength)" )
-                        Button {
-                            character.strength = rolledStrength
-                        } label: {
-                            Text("Roll")
-                        }
-                
                    
-
+                    
                     
                 }
+                
+                
+                //second row
+                HStack{
+                    VStack{
+            
+                        Text("Constitution").scaledToFit()
+                        Text("\(character.constitution)" )
+                            Button {
+                                
+                                character.strength = rolledConstitution
+                            } label: {
+                                Text("Roll")
+                            }
+                    }.padding()
+                    
+                    VStack{
+            
+                        Text("Wisdom").scaledToFit()
+                        Text("\(character.wisdom)" )
+                            Button {
+                                
+                                character.strength = rolledWisdom
+                            } label: {
+                                Text("Roll")
+                            }
+                    }.padding()
+                }
+                
+                HStack{
+                    VStack{
+            
+                        Text("Intelligence").scaledToFit()
+                        Text("\(character.intelligence)" )
+                            Button {
+                                
+                                character.strength = rolledIntelligence
+                            } label: {
+                                Text("Roll")
+                            }
+                    }.padding()
+                    VStack{
+            
+                        Text("Charisma").scaledToFit()
+                        Text("\(character.charisma)" )
+                            Button {
+                                
+                                character.strength = rolledCharisma
+                            } label: {
+                                Text("Roll")
+                            }
+                    }.padding()
+                    
+                    
+                }
+                
+                
+               
               
             }
             Spacer()

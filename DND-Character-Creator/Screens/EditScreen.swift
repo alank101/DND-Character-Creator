@@ -23,18 +23,19 @@ struct EditScreen: View {
     @Binding var character: CharacterModel
     //    @Binding var attribute: Attribute
     var body: some View {
-        VStack{
+        VStack {
             Text("Character Creator")
             Spacer()
             //        Text("Character Creator")
             //need same font as initial screej
             //top part
             HStack {
-                VStack{
+                VStack(alignment: .leading) {
                     // need two drop downs
                     //stacked on top of each other
                     //                Dropdown(character: Binding<CharacterModel>)
-                    //                    Text("\(character.name)")
+                    Text("Character Name:")
+                    TextField("Character Name", text: $character.name)
                     Picker(selection: $character.charClass) {
                         Group {
                             Text("Sorcerer").tag(Class.sorcerer)
@@ -101,9 +102,9 @@ struct EditScreen: View {
             //center section filled with properties of character
             //only six options so we probably  only need to create just two hstacks
             // future reference, it we expand this, this could be a lazy grid
-            VStack{
-                HStack{
-                    VStack{
+            VStack {
+                HStack {
+                    VStack {
                         Text("Strength")
                         Text("\(character.strength)" )
                         Button {
@@ -116,48 +117,48 @@ struct EditScreen: View {
                         Text("Dexterity")
                         Text("\(character.dexterity)" )
                         Button {
-                            character.strength = rolledDexterity
+                            character.dexterity = rolledDexterity
                         } label: {
                             Text("Roll")
                         }
                     }.padding()
                 }
                 //second row
-                HStack{
-                    VStack{
+                HStack {
+                    VStack {
                         Text("Constitution").scaledToFit()
                         Text("\(character.constitution)" )
                         Button {
-                            character.strength = rolledConstitution
+                            character.constitution = rolledConstitution
                         } label: {
                             Text("Roll")
                         }
                     }.padding()
-                    VStack{
+                    VStack {
                         Text("Wisdom").scaledToFit()
                         Text("\(character.wisdom)" )
                         Button {
-                            character.strength = rolledWisdom
+                            character.wisdom = rolledWisdom
                         } label: {
                             Text("Roll")
                         }
                     }.padding()
                 }
-                HStack{
-                    VStack{
+                HStack {
+                    VStack {
                         Text("Intelligence").scaledToFit()
                         Text("\(character.intelligence)" )
                         Button {
-                            character.strength = rolledIntelligence
+                            character.intelligence = rolledIntelligence
                         } label: {
                             Text("Roll")
                         }
                     }.padding()
-                    VStack{
+                    VStack {
                         Text("Charisma").scaledToFit()
                         Text("\(character.charisma)" )
                         Button {
-                            character.strength = rolledCharisma
+                            character.charisma = rolledCharisma
                         } label: {
                             Text("Roll")
                         }

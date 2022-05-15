@@ -9,26 +9,38 @@ import SwiftUI
 
 struct InitialScreen: View {
     var body: some View {
-        ZStack{
+        VStack{
             Image("101")
                 .resizable()
-                .aspectRatio (contentMode: .fill)
-                .clipped()
-                .frame(height: 155)
-            HStack{
-                //Image 3* dice
-                
-            }
-            Spacer()
+                .scaledToFit()
+                .frame(height: 300)
+                .padding()
+            HStack {
+                Image("d20")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:75)
+                Image("d20")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:75)
+                Image("d20")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width:75)
+            }.padding()
             Text("Dungeons and Dragons Character Creator")
-                .multilineTextAlignment(.center)
-                
+                .font(.headline)
+                .fontWeight(.bold)
+                .padding()
+                .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 5.0))
+            
             //font should look similar to the ui screen on figma mockup
             
             // need dice
             
             
-//            Button() for going to next screen it should probably say enter //should navigate to Edit screen
+            //            Button() for going to next screen it should probably say enter //should navigate to Edit screen
         }
         
     }

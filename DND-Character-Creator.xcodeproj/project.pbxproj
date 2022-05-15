@@ -21,6 +21,7 @@
 		842F48462826CBCB00486914 /* DND_Character_CreatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */; };
 		842F48482826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */; };
 		8488EF15282FFAEE00589149 /* RaceDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488EF14282FFAEE00589149 /* RaceDropdown.swift */; };
+		8488EF1928313F7600589149 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8488EF1828313F7600589149 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		842F48452826CBCB00486914 /* DND_Character_CreatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITests.swift; sourceTree = "<group>"; };
 		842F48472826CBCB00486914 /* DND_Character_CreatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DND_Character_CreatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8488EF14282FFAEE00589149 /* RaceDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDropdown.swift; sourceTree = "<group>"; };
+		8488EF1828313F7600589149 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				10511BA228275A2A0033B766 /* InitialScreen.swift */,
+				8488EF1828313F7600589149 /* Launch Screen.storyboard */,
 				10511BA628275A510033B766 /* DetailPage.swift */,
 				10511BA428275A410033B766 /* EditScreen.swift */,
 			);
@@ -286,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8488EF1928313F7600589149 /* Launch Screen.storyboard in Resources */,
 				842F48322826CBCA00486914 /* Preview Assets.xcassets in Resources */,
 				842F482F2826CBCA00486914 /* Assets.xcassets in Resources */,
 			);

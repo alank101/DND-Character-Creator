@@ -10,8 +10,10 @@ import SwiftUI
 
 struct EditScreen: View {
     
-    //   need spot for character name
+    //Array for images
     var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2"]
+    
+    
     @Binding var pickedImage : String
     //rolls
     var rolledStrength = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
@@ -20,6 +22,8 @@ struct EditScreen: View {
     var rolledIntelligence = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledWisdom = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledCharisma = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+    
+    
     @Binding var character: CharacterModel
     //    @Binding var attribute: Attribute
     var body: some View {
@@ -85,17 +89,19 @@ struct EditScreen: View {
                 //                    .aspectRatio (contentMode: .fill)
                 //                    .clipped()
                 //                    .frame(height: 140)
-                VStack {
-                    ForEach(images, id: \.self ) { image in
-                        Button {
-                            pickedImage = image
-                        } label: {
-                            Image(image)
-                                .resizable()
-                                .scaledToFit()
-                        }
-                    }
-                }
+//                VStack {
+//                    ForEach(images, id: \.self ) { image in
+//                        Button {
+//                            pickedImage = image
+//                        } label: {
+//                            Image(image)
+//                                .resizable()
+//                                .scaledToFit()
+//                        }
+//                    }
+//                }
+                
+                PicDropDown()
             }
             .padding()
             Spacer()
@@ -174,5 +180,49 @@ struct EditScreen: View {
 struct EditScreen_Previews: PreviewProvider {
     static var previews: some View {
         EditScreen(pickedImage: .constant(""), character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: rolledStrength, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill"))))
+    }
+}
+
+
+
+struct PicDropDown: View{
+    @State var expand = false
+    
+    var body: some View{
+        VStack(){
+            VStack(spacing: 30){
+                Text("Choose your Avatar profile image")
+                    .fontWeight(.bold)
+                Image(systemName: expand ? "chevron.up": "chevron.down")
+                    .resizable()
+                    .frame(width: 13, height: 6)
+                
+            }.onTapGesture{
+                self.expand.toggle()
+                
+            }
+            if expand{
+                Button( action: {
+                    self.expand.toggle()
+                }){
+                    Image("dwarf1")
+                        .resizable()
+                        .scaledToFit()
+                }.foregroundColor(.black)
+                
+                
+                Button( action: {
+                    self.expand.toggle()
+                }){
+                    Image("dwarf2")
+                        .resizable()
+                        .scaledToFit()
+                }.foregroundColor(.black)
+                
+                
+            }
+        }
+        .padding()
+        .background(.blue)
     }
 }

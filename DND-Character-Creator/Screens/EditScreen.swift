@@ -10,8 +10,11 @@ import SwiftUI
 
 struct EditScreen: View {
     
-    //   need spot for character name
-   
+    //Array for images
+    var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2"]
+    
+    
+    @Binding var pickedImage : String
     //rolls
     var rolledStrength = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledDexterity = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
@@ -19,6 +22,8 @@ struct EditScreen: View {
     var rolledIntelligence = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledWisdom = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledCharisma = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
+    
+    
     @Binding var character: CharacterModel
     //    @Binding var attribute: Attribute
     var body: some View {
@@ -28,16 +33,13 @@ struct EditScreen: View {
             //        Text("Character Creator")
             //need same font as initial screej
             //top part
-            HStack(alignment: .center) {
-                Text("Character Name:")
-                TextField("Character Name", text: $character.name)
-            }.padding(.leading)
             HStack {
                 VStack(alignment: .leading) {
                     // need two drop downs
                     //stacked on top of each other
                     //                Dropdown(character: Binding<CharacterModel>)
-                    
+                    Text("Character Name:")
+                    TextField("Character Name", text: $character.name)
                     Picker(selection: $character.charClass) {
                         Group {
                             Text("Sorcerer").tag(Class.sorcerer)
@@ -81,21 +83,25 @@ struct EditScreen: View {
                         .frame(height: 30)
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.blue, lineWidth: 1.0).foregroundColor(.gray))
                 }
-                .padding()
                 //need image placement drop
                 //                Image( "101")
                 //                    .resizable()
                 //                    .aspectRatio (contentMode: .fill)
                 //                    .clipped()
                 //                    .frame(height: 140)
-                NavigationLink {
-                    ImagePicker(pickedImage: .constant("\(character.image)"), character: .constant(CharacterModel(name: "", charClass: .fighter, charRace: .human, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image("dwarf1"))))
-                } label: {
-                    character.image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width:150)
-                }.padding()
+//                VStack {
+//                    ForEach(images, id: \.self ) { image in
+//                        Button {
+//                            pickedImage = image
+//                        } label: {
+//                            Image(image)
+//                                .resizable()
+//                                .scaledToFit()
+//                        }
+//                    }
+//                }
+                
+                PicDropDown()
             }
             .padding()
             Spacer()
@@ -173,6 +179,50 @@ struct EditScreen: View {
 
 struct EditScreen_Previews: PreviewProvider {
     static var previews: some View {
-        EditScreen(character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: rolledStrength, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill"))))
+        EditScreen(pickedImage: .constant(""), character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: rolledStrength, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill"))))
+    }
+}
+
+
+
+struct PicDropDown: View{
+    @State var expand = false
+    
+    var body: some View{
+        VStack(){
+            VStack(spacing: 30){
+                Text("Choose your Avatar profile image")
+                    .fontWeight(.bold)
+                Image(systemName: expand ? "chevron.up": "chevron.down")
+                    .resizable()
+                    .frame(width: 13, height: 6)
+                
+            }.onTapGesture{
+                self.expand.toggle()
+                
+            }
+            if expand{
+                Button( action: {
+                    self.expand.toggle()
+                }){
+                    Image("dwarf1")
+                        .resizable()
+                        .scaledToFit()
+                }.foregroundColor(.black)
+                
+                
+                Button( action: {
+                    self.expand.toggle()
+                }){
+                    Image("dwarf2")
+                        .resizable()
+                        .scaledToFit()
+                }.foregroundColor(.black)
+                
+                
+            }
+        }
+        .padding()
+        .background(.blue)
     }
 }

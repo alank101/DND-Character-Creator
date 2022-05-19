@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct ImagePicker: View {
-    @State var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2"]
+    @State var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2", "tiefling1", "tiefling2", "halfling1", "halfling2", "half_orc1", "half_orc2", "half_elf1", "half_elf2", "gnome1", "gnome2"]
     @Binding var pickedImage: String
-    @Binding var character: CharacterModel
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
-        VStack {
+        List {
             ForEach($images, id: \.self ) { $image in
                 Button {
-                    image = "\($character.image)"
                     pickedImage = image
                     self.presentationMode.wrappedValue.dismiss()
                 } label: {
@@ -32,6 +30,6 @@ struct ImagePicker: View {
 
 struct ImagePicker_Previews: PreviewProvider {
     static var previews: some View {
-        ImagePicker(pickedImage: .constant(""), character: .constant(CharacterModel(name: "", charClass: .fighter, charRace: .human, strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10, image: Image("dwarf1"))))
+        ImagePicker(pickedImage: .constant(""))
     }
 }

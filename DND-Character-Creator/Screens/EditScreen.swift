@@ -89,22 +89,30 @@ struct EditScreen: View {
                 //                    .aspectRatio (contentMode: .fill)
                 //                    .clipped()
                 //                    .frame(height: 140)
-                VStack {
-                    Text("Character Picture")
-                    List {
-                        ForEach($images, id: \.self ) { $image in
-                            Button {
-                                character.image = Image(image)
-                            } label: {
-                                Image(image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 150)
-                            }
-                        }
-                    }
-                }.frame(width: 200)
-                .padding()
+                NavigationLink {
+                    ImagePicker(character: $character)
+                } label: {
+                    character.image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width:150)
+                }.padding()
+//                VStack {
+//                    Text("Character Picture")
+//                    List {
+//                        ForEach($images, id: \.self ) { $image in
+//                            Button {
+//                                character.image = Image(image)
+//                            } label: {
+//                                Image(image)
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 150)
+//                            }
+//                        }
+//                    }
+//                }.frame(width: 200)
+//                .padding()
             }
             .padding()
             Spacer()

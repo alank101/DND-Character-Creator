@@ -16,21 +16,21 @@ struct ClassDropdown: View {
     var body: some View {
         Picker(selection: $character.charClass) {
             Group {
-                Text("Sorcerer").tag(Class.sorcerer)
-                Text("Warlock").tag(Class.warlock)
-                Text("Fighter").tag(Class.fighter)
-                Text("Barbarian").tag(Class.barbarian)
-                Text("Ranger").tag(Class.ranger)
-                Text("Paladin").tag(Class.paladin)
-                Text("Bard").tag(Class.bard)
-                Text("Wizard").tag(Class.wizard)
-                Text("Cleric").tag(Class.cleric)
-                Text("Druid").tag(Class.druid)
+                Text("Sorcerer").tag(dndClass.sorcerer)
+                Text("Warlock").tag(dndClass.warlock)
+                Text("Fighter").tag(dndClass.fighter)
+                Text("Barbarian").tag(dndClass.barbarian)
+                Text("Ranger").tag(dndClass.ranger)
+                Text("Paladin").tag(dndClass.paladin)
+                Text("Bard").tag(dndClass.bard)
+                Text("Wizard").tag(dndClass.wizard)
+                Text("Cleric").tag(dndClass.cleric)
+                Text("Druid").tag(dndClass.druid)
             }
             Group {
-                Text("Rogue").tag(Class.rogue)
-                Text("Monk").tag(Class.monk)
-                Text("No Class").tag(Class.no_class)
+                Text("Rogue").tag(dndClass.rogue)
+                Text("Monk").tag(dndClass.monk)
+                Text("No Class").tag(dndClass.no_class)
             }
         } label: {
             Text("Picker")

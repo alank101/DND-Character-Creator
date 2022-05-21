@@ -41,21 +41,21 @@ struct EditScreen: View {
                     
                     Picker(selection: $character.charClass) {
                         Group {
-                            Text("Barbarian").tag(Class.barbarian)
-                            Text("Bard").tag(Class.bard)
-                            Text("Cleric").tag(Class.cleric)
-                            Text("Druid").tag(Class.druid)
-                            Text("Fighter").tag(Class.fighter)
-                            Text("Monk").tag(Class.monk)
-                            Text("Paladin").tag(Class.paladin)
-                            Text("Ranger").tag(Class.ranger)
-                            Text("Rogue").tag(Class.rogue)
-                            Text("Sorcerer").tag(Class.sorcerer)
+                            Text("Barbarian").tag(dndClass.barbarian)
+                            Text("Bard").tag(dndClass.bard)
+                            Text("Cleric").tag(dndClass.cleric)
+                            Text("Druid").tag(dndClass.druid)
+                            Text("Fighter").tag(dndClass.fighter)
+                            Text("Monk").tag(dndClass.monk)
+                            Text("Paladin").tag(dndClass.paladin)
+                            Text("Ranger").tag(dndClass.ranger)
+                            Text("Rogue").tag(dndClass.rogue)
+                            Text("Sorcerer").tag(dndClass.sorcerer)
                         }
                         Group {
-                            Text("Warlock").tag(Class.warlock)
-                            Text("Wizard").tag(Class.wizard)
-                            Text("No Class").tag(Class.no_class)
+                            Text("Warlock").tag(dndClass.warlock)
+                            Text("Wizard").tag(dndClass.wizard)
+                            Text("No Class").tag(dndClass.no_class)
                         }
                     } label: {
                         Text("Picker")

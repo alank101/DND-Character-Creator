@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 //need your help in finishing this!!
-enum Class: String{
+enum dndClass: String{
     case sorcerer, warlock, fighter, barbarian, ranger, paladin, bard, wizard, cleric, druid, rogue, monk, no_class
 }
 
@@ -21,7 +21,7 @@ enum Race: String{
 struct CharacterModel: Identifiable{
     var id = UUID().uuidString
     var name: String
-    var charClass: Class
+    var charClass: dndClass
     var charRace: Race
     var strength: Int
     var dexterity: Int

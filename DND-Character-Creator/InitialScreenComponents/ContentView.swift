@@ -43,7 +43,7 @@ struct ContentView: View {
                             Image(systemName: "plus")
                         }
                     }
-            }
+            }.navigationBarTitle("Character List")
         }
     }
 }

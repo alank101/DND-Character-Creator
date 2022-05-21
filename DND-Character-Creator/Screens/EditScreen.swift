@@ -10,11 +10,9 @@ import SwiftUI
 
 struct EditScreen: View {
     
-    //Array for images
-    var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2"]
     
+    //   need spot for character name
     
-    @Binding var pickedImage : String
     //rolls
     var rolledStrength = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledDexterity = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
@@ -22,40 +20,41 @@ struct EditScreen: View {
     var rolledIntelligence = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledWisdom = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
     var rolledCharisma = Int.random(in: 1...6) + Int.random(in: 1...6) + Int.random(in: 1...6)
-    
-    
     @Binding var character: CharacterModel
+    @State var images = ["dwarf1", "dwarf2", "elf1", "elf2", "human1", "human2", "tiefling1", "tiefling2", "halfling1", "halfling2", "half_orc1", "half_orc2", "half_elf1", "half_elf2", "gnome1", "gnome2"]
     //    @Binding var attribute: Attribute
     var body: some View {
         VStack {
-            Text("Character Creator")
-            Spacer()
             //        Text("Character Creator")
             //need same font as initial screej
             //top part
+            HStack(alignment: .center) {
+                Text("Character Name:")
+                TextField("Character Name", text: $character.name)
+                    .frame(width: 150)
+            }.padding()
             HStack {
                 VStack(alignment: .leading) {
                     // need two drop downs
                     //stacked on top of each other
                     //                Dropdown(character: Binding<CharacterModel>)
-                    Text("Character Name:")
-                    TextField("Character Name", text: $character.name)
+                    
                     Picker(selection: $character.charClass) {
                         Group {
-                            Text("Sorcerer").tag(Class.sorcerer)
-                            Text("Warlock").tag(Class.warlock)
-                            Text("Fighter").tag(Class.fighter)
                             Text("Barbarian").tag(Class.barbarian)
-                            Text("Ranger").tag(Class.ranger)
-                            Text("Paladin").tag(Class.paladin)
                             Text("Bard").tag(Class.bard)
-                            Text("Wizard").tag(Class.wizard)
                             Text("Cleric").tag(Class.cleric)
                             Text("Druid").tag(Class.druid)
+                            Text("Fighter").tag(Class.fighter)
+                            Text("Monk").tag(Class.monk)
+                            Text("Paladin").tag(Class.paladin)
+                            Text("Ranger").tag(Class.ranger)
+                            Text("Rogue").tag(Class.rogue)
+                            Text("Sorcerer").tag(Class.sorcerer)
                         }
                         Group {
-                            Text("Rogue").tag(Class.rogue)
-                            Text("Monk").tag(Class.monk)
+                            Text("Warlock").tag(Class.warlock)
+                            Text("Wizard").tag(Class.wizard)
                             Text("No Class").tag(Class.no_class)
                         }
                     } label: {
@@ -67,14 +66,14 @@ struct EditScreen: View {
                     //                Dropdown(character: Binding<CharacterModel>)
                     //                    Text("\(character.name)")
                     Picker(selection: $character.charRace) {
-                        Text("Tiefling").tag(Race.tiefling)
-                        Text("Human").tag(Race.human)
-                        Text("Elf").tag(Race.elf)
-                        Text("Half Elf").tag(Race.half_elf)
-                        Text("Halfling").tag(Race.halfling)
-                        Text("Half Orc").tag(Race.half_orc)
                         Text("Dwarf").tag(Race.dwarf)
+                        Text("Elf").tag(Race.elf)
                         Text("Gnome").tag(Race.gnome)
+                        Text("Half Elf").tag(Race.half_elf)
+                        Text("Half Orc").tag(Race.half_orc)
+                        Text("Halfling").tag(Race.halfling)
+                        Text("Human").tag(Race.human)
+                        Text("Tiefling").tag(Race.tiefling)
                         Text("No Race").tag(Race.no_race)
                     } label: {
                         Text("Picker")
@@ -83,25 +82,29 @@ struct EditScreen: View {
                         .frame(height: 30)
                         .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.blue, lineWidth: 1.0).foregroundColor(.gray))
                 }
+                .padding()
                 //need image placement drop
                 //                Image( "101")
                 //                    .resizable()
                 //                    .aspectRatio (contentMode: .fill)
                 //                    .clipped()
                 //                    .frame(height: 140)
-//                VStack {
-//                    ForEach(images, id: \.self ) { image in
-//                        Button {
-//                            pickedImage = image
-//                        } label: {
-//                            Image(image)
-//                                .resizable()
-//                                .scaledToFit()
-//                        }
-//                    }
-//                }
-                
-                PicDropDown()
+                VStack {
+                    Text("Character Picture")
+                    List {
+                        ForEach($images, id: \.self ) { $image in
+                            Button {
+                                character.image = Image(image)
+                            } label: {
+                                Image(image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 150)
+                            }
+                        }
+                    }
+                }.frame(width: 200)
+                .padding()
             }
             .padding()
             Spacer()
@@ -112,7 +115,30 @@ struct EditScreen: View {
                 HStack {
                     VStack {
                         Text("Strength")
-                        Text("\(character.strength)" )
+                        HStack {
+                            Text("\(character.strength)")
+                            Text("|")
+                            if character.strength == 3 {
+                                Text("-4")
+                            } else if character.strength < 6 {
+                                Text("-3")
+                            } else if character.strength < 8 {
+                               Text("-2")
+                            } else if character.strength < 10 {
+                                Text("-1")
+                            } else if character.strength < 12 {
+                                Text("0")
+                            } else if character.strength < 14{
+                                Text("+1")
+                            } else if character.strength < 16 {
+                                Text("+2")
+                            } else if character.strength < 18 {
+                                Text("+3")
+                            } else if character.strength == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.strength = rolledStrength
                         } label: {
@@ -121,7 +147,30 @@ struct EditScreen: View {
                     }.padding()
                     VStack{
                         Text("Dexterity")
-                        Text("\(character.dexterity)" )
+                        HStack {
+                            Text("\(character.dexterity)")
+                            Text("|")
+                            if character.dexterity == 3 {
+                                Text("-4")
+                            } else if character.dexterity < 6 {
+                                Text("-3")
+                            } else if character.dexterity < 8 {
+                               Text("-2")
+                            } else if character.dexterity < 10 {
+                                Text("-1")
+                            } else if character.dexterity < 12 {
+                                Text("0")
+                            } else if character.dexterity < 14{
+                                Text("+1")
+                            } else if character.dexterity < 16 {
+                                Text("+2")
+                            } else if character.dexterity < 18 {
+                                Text("+3")
+                            } else if character.dexterity == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.dexterity = rolledDexterity
                         } label: {
@@ -133,7 +182,30 @@ struct EditScreen: View {
                 HStack {
                     VStack {
                         Text("Constitution").scaledToFit()
-                        Text("\(character.constitution)" )
+                        HStack {
+                            Text("\(character.constitution)")
+                            Text("|")
+                            if character.constitution == 3 {
+                                Text("-4")
+                            } else if character.constitution < 6 {
+                                Text("-3")
+                            } else if character.constitution < 8 {
+                               Text("-2")
+                            } else if character.constitution < 10 {
+                                Text("-1")
+                            } else if character.constitution < 12 {
+                                Text("0")
+                            } else if character.constitution < 14{
+                                Text("+1")
+                            } else if character.constitution < 16 {
+                                Text("+2")
+                            } else if character.constitution < 18 {
+                                Text("+3")
+                            } else if character.constitution == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.constitution = rolledConstitution
                         } label: {
@@ -142,7 +214,30 @@ struct EditScreen: View {
                     }.padding()
                     VStack {
                         Text("Wisdom").scaledToFit()
-                        Text("\(character.wisdom)" )
+                        HStack {
+                            Text("\(character.wisdom)")
+                            Text("|")
+                            if character.wisdom == 3 {
+                                Text("-4")
+                            } else if character.wisdom < 6 {
+                                Text("-3")
+                            } else if character.wisdom < 8 {
+                               Text("-2")
+                            } else if character.wisdom < 10 {
+                                Text("-1")
+                            } else if character.wisdom < 12 {
+                                Text("0")
+                            } else if character.wisdom < 14{
+                                Text("+1")
+                            } else if character.wisdom < 16 {
+                                Text("+2")
+                            } else if character.wisdom < 18 {
+                                Text("+3")
+                            } else if character.wisdom == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.wisdom = rolledWisdom
                         } label: {
@@ -153,7 +248,30 @@ struct EditScreen: View {
                 HStack {
                     VStack {
                         Text("Intelligence").scaledToFit()
-                        Text("\(character.intelligence)" )
+                        HStack {
+                            Text("\(character.intelligence)")
+                            Text("|")
+                            if character.intelligence == 3 {
+                                Text("-4")
+                            } else if character.intelligence < 6 {
+                                Text("-3")
+                            } else if character.intelligence < 8 {
+                               Text("-2")
+                            } else if character.intelligence < 10 {
+                                Text("-1")
+                            } else if character.intelligence < 12 {
+                                Text("0")
+                            } else if character.intelligence < 14{
+                                Text("+1")
+                            } else if character.intelligence < 16 {
+                                Text("+2")
+                            } else if character.intelligence < 18 {
+                                Text("+3")
+                            } else if character.intelligence == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.intelligence = rolledIntelligence
                         } label: {
@@ -162,7 +280,30 @@ struct EditScreen: View {
                     }.padding()
                     VStack {
                         Text("Charisma").scaledToFit()
-                        Text("\(character.charisma)" )
+                        HStack {
+                            Text("\(character.charisma)")
+                            Text("|")
+                            if character.charisma == 3 {
+                                Text("-4")
+                            } else if character.charisma < 6 {
+                                Text("-3")
+                            } else if character.charisma < 8 {
+                               Text("-2")
+                            } else if character.charisma < 10 {
+                                Text("-1")
+                            } else if character.charisma < 12 {
+                                Text("0")
+                            } else if character.charisma < 14{
+                                Text("+1")
+                            } else if character.charisma < 16 {
+                                Text("+2")
+                            } else if character.charisma < 18 {
+                                Text("+3")
+                            } else if character.charisma == 18 {
+                                Text("+4")
+                            }
+                        }.padding()
+                            .overlay(RoundedRectangle(cornerRadius: 5).stroke(Color.black, lineWidth: 1.0))
                         Button {
                             character.charisma = rolledCharisma
                         } label: {
@@ -172,57 +313,13 @@ struct EditScreen: View {
                 }
             }
             Spacer()
-        }
+        }.navigationBarTitle("Character Creator", displayMode: .inline)
         //NO BOTTOM PART THOUGHT I THINK ONE IS NEEDED
     }
 }
 
 struct EditScreen_Previews: PreviewProvider {
     static var previews: some View {
-        EditScreen(pickedImage: .constant(""), character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: rolledStrength, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill"))))
-    }
-}
-
-
-
-struct PicDropDown: View{
-    @State var expand = false
-    
-    var body: some View{
-        VStack(){
-            VStack(spacing: 30){
-                Text("Choose your Avatar profile image")
-                    .fontWeight(.bold)
-                Image(systemName: expand ? "chevron.up": "chevron.down")
-                    .resizable()
-                    .frame(width: 13, height: 6)
-                
-            }.onTapGesture{
-                self.expand.toggle()
-                
-            }
-            if expand{
-                Button( action: {
-                    self.expand.toggle()
-                }){
-                    Image("dwarf1")
-                        .resizable()
-                        .scaledToFit()
-                }.foregroundColor(.black)
-                
-                
-                Button( action: {
-                    self.expand.toggle()
-                }){
-                    Image("dwarf2")
-                        .resizable()
-                        .scaledToFit()
-                }.foregroundColor(.black)
-                
-                
-            }
-        }
-        .padding()
-        .background(.blue)
+        EditScreen(character: .constant(CharacterModel(name: "gabriel", charClass: .barbarian, charRace: .elf, strength: rolledStrength, dexterity: 0 , constitution: 0, intelligence: 0, wisdom: 0, charisma: 0, image: Image(systemName: "pencil.circle.fill"))))
     }
 }
